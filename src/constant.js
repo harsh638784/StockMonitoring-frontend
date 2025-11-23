@@ -1,1 +1,1 @@
-export const apiPrefix = "https://stock-monitoring-backend-gamma.vercel.app"
+export const apiPrefix = "https://stockmonitoring-backend.onrender.com";
