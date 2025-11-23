@@ -1,49 +1,55 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useCookies } from "react-cookie";
-import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+// import { useEffect, useState } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { useCookies } from "react-cookie";
+// import axios from "axios";
+// import { ToastContainer, toast } from "react-toastify";
+// import styles from './index.module.css';
+ 
+// const Home = () => {
+//   const navigate = useNavigate();
+//   const [cookies, removeCookie] = useCookies([]);
+//   const [username, setUsername] = useState("");
 
-const Home = () => {
-  const navigate = useNavigate();
-  const [cookies, removeCookie] = useCookies([]);
-  const [username, setUsername] = useState("");
-  useEffect(() => {
-    const verifyCookie = async () => {
-      if (!cookies.token) {
-        navigate("/login");
-      }
-      const { data } = await axios.post(
-        "http://localhost:4000",
-        {},
-        { withCredentials: true }
-      );
-      const { status, user } = data;
-      setUsername(user);
-      return status
-        ? toast(`Hello ${user}`, {
-            position: "top-right",
-          })
-        : (removeCookie("token"), navigate("/login"));
-    };
-    verifyCookie();
-  }, [cookies, navigate, removeCookie]);
-  const Logout = () => {
-    removeCookie("token");
-    navigate("/signup");
-  };
-  return (
-    <>
-      <div className="home_page">
-        <h4>
-          {" "}
-          Welcome <span>{username}</span>
-        </h4>
-        <button onClick={Logout}>LOGOUT</button>
-      </div>
-      <ToastContainer />
-    </>
-  );
-};
+// const [toastShown, setToastShown] = useState(false);
 
-export default Home;
+ 
+
+// useEffect(() => {
+//   const verifyCookie = async () => {
+//     const { data } = await axios.post("http://localhost:4000", {}, { withCredentials: true });
+//     if (data.status && !toastShown) {
+//       setUsername(data.user);
+//       toast(`Hello ${data.user}`, { position: "top-right" });
+//       setToastShown(true);
+//     } else if (!data.status) {
+//       removeCookie("token");
+//       navigate("/login");
+//     }
+//   };
+//   verifyCookie();
+// }, [toastShown]);
+
+
+
+
+//   const Logout = () => {
+//     removeCookie("token");
+//     navigate("/signup");
+//   };
+//   return (
+//     <>
+     
+//         <div className={styles.home_page}>
+//           <h4>
+//             {" "}
+//             Welcome <span>{username}</span>
+//           </h4>
+//           <button onClick={Logout}>LOGOUT</button>
+//         </div>
+ 
+//       <ToastContainer />
+//     </>
+//   );
+// };
+
+// export default Home;
