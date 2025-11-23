@@ -4,22 +4,22 @@ import { CookiesProvider } from "react-cookie";
 import "./App.css";
 import "./index.css";
 
- import  Home from "./components/Home";
+ import  Home from "./components/Home.js";
  
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/ProtectedRoute.js";
 
 //  import { ToastContainer } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
-import HomePage from "./landing_page/home/HomePage";
-import AboutPage from "./landing_page/about/AboutPage";
-import PricingPage from "./landing_page/pricing/PricingPage";
-import ProductPage from "./landing_page/products/ProductPage";
-import SupportPage from "./landing_page/support/SupportPage";
+import HomePage from "./landing_page/home/HomePage.js";
+import AboutPage from "./landing_page/about/AboutPage.js";
+import PricingPage from "./landing_page/pricing/PricingPage.js";
+import ProductPage from "./landing_page/products/ProductPage.js";
+import SupportPage from "./landing_page/support/SupportPage.js";
  
 
  
-import { Login, Signup } from "./pages";
+import { Login, Signup } from "./pages/index.js";
 
 function App() {
   return (
