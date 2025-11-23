@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import styles from "./Orders.module.css"; 
-
+import { apiPrefix } from "../constant.js";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -19,7 +19,7 @@ const Orders = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:4000/newOrders", {
+        const response = await axios.get(`${apiPrefix}/newOrders`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

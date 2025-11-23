@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
-
+import { apiPrefix } from "../constant.js";
 import "./Menu.css";
 
 const Menu = () => {
@@ -23,7 +23,7 @@ const Menu = () => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:4000/logout",
+        `${apiPrefix}/logout`,
         {},
         { withCredentials: true }
       );

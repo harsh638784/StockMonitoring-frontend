@@ -3,11 +3,12 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from 'axios';
+import { apiPrefix } from "../constant.js";
 const Positions = () => {
  
 const [allPositions,setAllPosition]=useState([]);
 useEffect(()=>{
-  axios.get("http://localhost:4000/allPositions").then((res)=>{
+  axios.get(`${apiPrefix}/allPositions`).then((res)=>{
  console.log(res.data);
  setAllPosition(res.data);
   })
