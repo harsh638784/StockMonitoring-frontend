@@ -1,0 +1,80 @@
+/* Profile section ko relative position dein taaki dropdown iske hisab se align ho */
+.profile-section {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.profile:hover {
+  background-color: #f0f0f0; /* Thoda hover effect */
+}
+
+.avatar {
+  /* ...Aapki avatar ki styling... */
+  width: 40px;
+  height: 40px;
+  background-color: #5a67d8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: 600;
+}
+
+
+/* Dropdown menu ki styling */
+.profile-dropdown {
+  position: absolute;
+  top: 100%; /* ✅ 'bottom' ko 'top' karein */
+  right: 0; 
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  z-index: 9999;
+  overflow: hidden;
+  margin-top: 10px; /* ✅ 'margin-bottom' ko 'margin-top' karein */
+}
+
+.profile-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-dropdown ul li {
+  padding: 12px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s;
+}
+
+.profile-dropdown ul li:last-child {
+  border-bottom: none;
+  color: #e53e3e; /* Logout ko red color de sakte hain */
+}
+
+.profile-dropdown ul li:hover {
+  background-color: #f7fafc;
+}
+
+.profile-dropdown ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}

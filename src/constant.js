@@ -1,0 +1,1 @@
+export const apiPrefix = "https://stock-monitoring-backend-gamma.vercel.app"

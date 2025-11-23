@@ -4,7 +4,7 @@ import { CookiesProvider } from "react-cookie";
 import "./App.css";
 import "./index.css";
 
- import  Home from "./components/Home.js";
+ import Home from "./components/Home.js";
  
 import ProtectedRoute from "./components/ProtectedRoute.js";
 

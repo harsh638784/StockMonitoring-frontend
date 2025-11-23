@@ -1,0 +1,75 @@
+/* File ka naam: Orders.module.css */
+
+.ordersContainer {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.noOrders {
+  text-align: center;
+  padding: 4rem 0;
+  border: 1px dashed #e0e0e0;
+  border-radius: 5px;
+}
+
+.noOrders p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background-color: #387ed1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #316dab;
+}
+
+.ordersList h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.ordersList table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ordersList th, .ordersList td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ordersList th {
+  color: #888;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.ordersList td {
+  color: #333;
+}
+
+/* Status ke liye specific styling */
+.status-completed {
+    color: #28a745; /* Green */
+}
+
+.status-pending {
+    color: #ffc107; /* Yellow */
+}
+
+.status-cancelled {
+    color: #dc3545; /* Red */
+}
